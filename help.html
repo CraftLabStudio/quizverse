@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuizVerse Help Center</title>
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="help.css">
+
+</head>
+
+<body>
+
+    <!-- Overlay -->
+
+    <div class="overlay">
+
+        <!-- Help Box -->
+
+        <div class="help-box">
+
+            <!-- Top -->
+
+            <div class="top-bar">
+
+                <h1>
+                    QUIZVERSE:
+                    <span>HELP CENTER</span>
+                </h1>
+
+                <!-- Close Button -->
+
+                <a href="index.html" class="close-btn">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- Main Layout -->
+
+            <div class="help-layout">
+
+                <!-- Left FAQ -->
+
+                <div class="faq-section">
+
+                    <h2>Top FAQs</h2>
+
+                    <div class="faq-list">
+
+                        <div class="faq-item">
+                            How are quiz scores calculated?
+                        </div>
+                        <div class="faq-answer">
+                            Scores are calculated based on the number of correct answers you select during the quiz.
+                        </div>
+
+                        <div class="faq-item">
+                            What happens if I don't answer a question?
+                        </div>
+                        <div class="faq-answer">
+                            Unanswered questions are counted as not attempted and do not earn any points.
+                        </div>
+
+                        <div class="faq-item">
+                            Can I skip questions and return later?
+                        </div>
+                        <div class="faq-answer">
+                            Yes. You can move between questions using the Previous and Next buttons at any time before
+                            submitting.
+                        </div>
+
+                        <div class="faq-item">
+                            How does the quiz timer work?
+                        </div>
+                        <div class="faq-answer">
+                            Each quiz includes a countdown timer. When the timer reaches zero, the quiz is automatically
+                            submitted.
+                        </div>
+
+                        <div class="faq-item">
+                            Can I see the correct answers after submitting?
+                        </div>
+                        <div class="faq-answer">
+                            Yes. After submission, you can review every question, your answer, and the correct answer.
+                        </div>
+
+                        <div class="faq-item">
+                            How many quizzes are available?
+                        </div>
+                        <div class="faq-answer">
+                            QuizVerse offers quizzes across multiple categories, with new quizzes added regularly.
+                        </div>
+
+                        <div class="faq-item">
+                            Which categories can I explore?
+                        </div>
+                        <div class="faq-answer">
+                            You can explore History, Science & Technology, Art & Culture, Geography, Programming, Space
+                            Exploration, Ancient Empires, Movie Trivia, and more.
+                        </div>
+
+                        <div class="faq-item">
+                            How can I contact QuizVerse support?
+                        </div>
+                        <div class="faq-answer">
+                            Visit the Contact page to find support information and ways to reach the QuizVerse team.
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <!-- Center Content -->
+
+                <div class="center-section">
+
+                    <!-- Search -->
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input type="text" placeholder="Search for answers (e.g. score, timer, results)">
+
+                    </div>
+                    <p id="noResults" class="no-results">
+                        No matching help topics found. Try searching for:
+                        score, timer, categories, results
+                    </p>
+
+
+                    <!-- Cards -->
+
+                    <div class="help-cards">
+
+                        <a href="quiz1.html" class="help-card">
+
+                            <i class="fa-solid fa-play"></i>
+
+                            <h3>Start a Quiz</h3>
+
+                        </a>
+
+
+
+                        <a href="categories.html" class="help-card">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                            <h3>Browse Categories</h3>
+
+                        </a>
+
+
+
+                        <a href="instructions.html" class="help-card">
+
+                            <i class="fa-solid fa-list-check"></i>
+
+                            <h3>Quiz Instructions</h3>
+
+                        </a>
+
+
+
+                        <a href="help_result.html" class="help-card">
+
+                            <i class="fa-solid fa-chart-column"></i>
+
+                            <h3>Results & Review</h3>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Right Side -->
+
+                <div class="support-section">
+
+                    <h2>Need More Help?</h2>
+                    <a href="instructions.html" class="support-link">
+                        Quiz Instructions
+                    </a>
+
+                    <a href="help_result.html" class="support-link">
+                        Results & Review Guide
+                    </a>
+
+                    <a href="https://www.instagram.com/craftlabstudio_official/" target="_blank" class="support-link">
+                        Visit Instagram
+                    </a>
+
+                    <a href="https://www.youtube.com/@LovesCraftingLab" target="_blank"
+                        class="support-link contact-btn">
+                        Ask on YouTube
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        const questions =
+            document.querySelectorAll(".faq-item");
+
+        questions.forEach((question) => {
+
+            question.addEventListener("click", () => {
+
+                const answer =
+                    question.nextElementSibling;
+
+                if (answer.style.display === "block") {
+
+                    answer.style.display = "none";
+
+                } else {
+
+                    answer.style.display = "block";
+
+                }
+
+            });
+
+        });
+
+        const searchInput =
+document.querySelector(".search-box input");
+
+const faqItems =
+document.querySelectorAll(".faq-item");
+
+const noResults =
+document.getElementById("noResults");
+
+searchInput.addEventListener("keyup", () => {
+
+    const filter =
+    searchInput.value.toLowerCase();
+
+    let matches = 0;
+
+    faqItems.forEach(item => {
+
+        const answer =
+        item.nextElementSibling;
+
+        const questionText =
+        item.textContent.toLowerCase();
+
+        const answerText =
+        answer.textContent.toLowerCase();
+
+        if(
+            questionText.includes(filter) ||
+            answerText.includes(filter)
+        ){
+
+            item.style.display = "block";
+            answer.style.display = "block";
+
+            matches++;
+
+        }else{
+
+            item.style.display = "none";
+            answer.style.display = "none";
+
+        }
+
+    });
+
+    if(matches === 0 && filter !== ""){
+        noResults.style.display = "block";
+    }else{
+        noResults.style.display = "none";
+    }
+
+});
+
+    </script>
+</body>
+
+</html>

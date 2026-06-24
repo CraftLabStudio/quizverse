@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #08111f;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+/* Overlay */
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)),
+
+        url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+/* Privacy Box */
+
+.privacy-box {
+    width: 100%;
+    max-width: 950px;
+
+    background: #101827;
+
+    border-radius: 28px;
+
+    padding: 35px;
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Header */
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.top-bar h1 {
+    font-size: 34px;
+    color: white;
+}
+
+.top-bar span {
+    color: #f6c453;
+}
+
+/* Close Button */
+
+.close-btn {
+    width: 48px;
+    height: 48px;
+
+    background: #162133;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+    color: white;
+
+    transition: 0.3s;
+}
+
+.close-btn:hover {
+    background: #f6c453;
+    color: black;
+
+    transform: rotate(90deg);
+}
+
+/* Content */
+
+.privacy-content {
+    max-height: 450px;
+
+    overflow-y: auto;
+
+    padding-right: 10px;
+}
+
+/* Scrollbar */
+
+.privacy-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.privacy-content::-webkit-scrollbar-thumb {
+    background: #f6c453;
+    border-radius: 50px;
+}
+
+/* Sections */
+
+.policy-section {
+    margin-bottom: 35px;
+}
+
+.policy-section h2 {
+    color: #f6c453;
+
+    margin-bottom: 14px;
+
+    font-size: 24px;
+}
+
+.policy-section p {
+    color: #c4cfdf;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+}
+
+.contact-info {
+    margin-top: 12px;
+
+    color: white;
+
+    font-weight: 500;
+}
+
+/* Buttons */
+
+.bottom-buttons {
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.accept-btn,
+.back-btn {
+    padding: 12px 28px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.accept-btn {
+    background: #f6c453;
+    color: black;
+    font-weight: 600;
+}
+
+.back-btn {
+    background: #162133;
+    color: white;
+}
+
+.accept-btn:hover,
+.back-btn:hover {
+    transform: translateY(-4px);
+}
+
+/* Responsive */
+
+@media(max-width: 768px) {
+
+    .privacy-box {
+        padding: 25px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .top-bar h1 {
+        font-size: 26px;
+    }
+
+    .bottom-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+/* NEW RESPONSIVE CODE  */
+
+/* ========================================= */
+/* EXTRA RESPONSIVENESS FOR PRIVACY PAGE */
+/* ========================================= */
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Tablets */
+
+@media (max-width: 992px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+    .privacy-box {
+        max-width: 100%;
+        padding: 30px;
+    }
+
+    .top-bar h1 {
+        font-size: 30px;
+    }
+
+    .privacy-content {
+        max-height: 400px;
+    }
+
+    .policy-section h2 {
+        font-size: 22px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-y: auto;
+        align-items: flex-start;
+        padding: 12px;
+    }
+
+    .overlay {
+        height: auto;
+        min-height: 100vh;
+        padding: 12px;
+    }
+
+    .privacy-box {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .top-bar {
+        gap: 15px;
+    }
+
+    .top-bar h1 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .close-btn {
+        width: 42px;
+        height: 42px;
+    }
+
+    .privacy-content {
+        max-height: none;
+        overflow-y: visible;
+        padding-right: 0;
+    }
+
+    .policy-section {
+        margin-bottom: 25px;
+    }
+
+    .policy-section h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .policy-section p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .contact-info {
+        font-size: 14px;
+    }
+
+    .bottom-buttons {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .accept-btn,
+    .back-btn {
+        padding: 12px 22px;
+    }
+}
+
+/* Small Phones */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .overlay {
+        padding: 10px;
+    }
+
+    .privacy-box {
+        padding: 15px;
+        border-radius: 16px;
+    }
+
+    .top-bar h1 {
+        font-size: 21px;
+    }
+
+    .close-btn {
+        width: 38px;
+        height: 38px;
+    }
+
+    .policy-section h2 {
+        font-size: 18px;
+    }
+
+    .policy-section p {
+        font-size: 13px;
+    }
+
+    .contact-info {
+        font-size: 13px;
+    }
+
+    .bottom-buttons {
+        flex-direction: column;
+    }
+
+    .accept-btn,
+    .back-btn {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px;
+    }
+}
